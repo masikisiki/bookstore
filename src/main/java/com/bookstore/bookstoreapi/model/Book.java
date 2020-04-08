@@ -16,7 +16,7 @@ import java.util.Set;
 
 @XmlRootElement
 @Entity
-public class Book extends Auditable {
+public class Book extends Auditable<String> {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

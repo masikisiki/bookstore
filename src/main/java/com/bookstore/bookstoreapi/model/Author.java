@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlElement;
 
 @Entity
-public class Author extends Auditable {
+public class Author extends Auditable<String> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
