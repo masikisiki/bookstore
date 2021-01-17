@@ -19,6 +19,7 @@ public interface BookStoreMapper {
     BookInput toBookInput(Book source);
 
     default List<String> toAuthorNames(Book source) {
+        //hello
         return source.getAuthors().stream().map(Author::getFullName).collect(Collectors.toList());
     }
 }
