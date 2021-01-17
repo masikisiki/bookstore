@@ -32,10 +32,9 @@ public class Runner implements CommandLineRunner {
         Unmarshaller unmarshaller = context.createUnmarshaller();
 
         BookStore books = (BookStore) unmarshaller.unmarshal(bookStore.getFile());
+        System.out.println("test");
         List<BookInput> bookInputs = bookStoreMapper.toBookInputs(books.getBooks());
+        
         bookInputs.forEach(bookService::addBook);
-
-        System.out.println("-----------------------------Init Bookstore----------------------");
-        System.out.println(books.getBooks());
     }
 }
